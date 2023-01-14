@@ -47,6 +47,10 @@ header {
 
 }
 
+.banner p{
+    font-size: 30px;
+}
+
 form {
     text-align: center;
     margin-top: 20px;
