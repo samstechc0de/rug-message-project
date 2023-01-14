@@ -15,8 +15,14 @@
     justify-content: center;
     
     height: 700px;
-    background: url('/Users/samiel-amoudi/Downloads/flexbox-business-site-starting/8c1efff7-c9c2-42ad-b8f7-caefdea0cfd3.avif') center no-repeat;
+    background: url('/Users/samiel-amoudi/Desktop/rug message project/b1bd60cc-6cf8-4a88-85d3-ed6c370f5b30.webp') center no-repeat;
     
+}
+
+#rug {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 header {

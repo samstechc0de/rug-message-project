@@ -1,58 +1,33 @@
-console.log('please enter your twitter username')
+const nftNames = ['Frosties', 'Evil Ape', 'Pixelmon','Crypto Zoo', 'R2R' , 'Blockverse', 'SolGame', 'Swipathefox' ];
+const images = ['/Users/samiel-amoudi/Desktop/rug message project/How-To-Properly-Care-For-Different-Types-Of-Rugs-So-They-Last-Longer-2.webp', '/Users/samiel-amoudi/Desktop/rug message project/How-To-Properly-Care-For-Different-Types-Of-Rugs-So-They-Last-Longer.webp', '/Users/samiel-amoudi/Desktop/rug message project/rug-care.webp'];
 
-let userName = '@nftc0llect0r';
+function generateMessage(nft) {
+    let match = false;
+    let img;
+    for(let i = 0; i < nftNames.length; i++) {
+      if (nftNames[i] === nft) {
+          match = true;
+          img = document.createElement("img");
+          img.src = images[Math.floor(Math.random() * images.length)];
+          img.id = "message-image";
+          document.getElementById("message-container").appendChild(img);
+          break;
+      }
+    }
+    if(!match){
+      document.getElementById("message").innerHTML = 'The gods have spared you';
+      if(!img){
+          img.remove();
+      }
+    }
+  }
+  
+  
 
-userName? console.log(`Hello , ${userName}!`)
-: console.log('Hello!');
-console.log('enter the name of the NFT to see if you got rugged')
-let nft = 'R2R'
-const userQuestion = `is my ${nft} a rug?`;
-
-userQuestion? console.log(`${userName} is asking, ${userQuestion}`) : console.log('please ask a question');
-
-let randomNumber = Math.floor(Math.random() * 8);
-
-
-let rugType='';
-
-switch(randomNumber){
-
-case 0:
-console.log('eightBall :It is certain')
-break;
-
-case 1:
-console.log('eightBall:It is decidedly so')
-break;
-
-case 2:
-console.log('eightBall:Reply hazy try again')
-break;
-
-case 3:
-console.log('eightBall:Cannot predict now')
-break;
-
-case 4:
-console.log('eightBall:Do not count on it')
-break;
-
-case 4:
-console.log('eightBall:My sources say no')
-break;
-
-case 6:
-console.log('eightBall:Outlook not so good')
-break;
-
-case 7:
-console.log('eightBall:Signs point to yes')
-break;
-
-default:
-console.log('eightBall:try asking again!')
-break;
-
-}
-
+const form = document.getElementById('nft-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const input = document.getElementById('nft-name').value;
+  generateMessage(input);
+});
 
