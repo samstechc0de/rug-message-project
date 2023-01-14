@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: black;
+    color:seashell;
+    font-family: helvetica;
+    text-transform: uppercase;
+}
+
+
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 700px;
+    background: url('/Users/samiel-amoudi/Downloads/flexbox-business-site-starting/8c1efff7-c9c2-42ad-b8f7-caefdea0cfd3.avif') center no-repeat;
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+}
+.banner{
+    padding:10px 0px ;
+    width: 1200px;
+}
+.banner h2 , h4{
+    line-height: 80%;
+    text-align: center;
+    opacity: 0.5;
+    justify-content: baseline;
+
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+  
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+  
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+  }
+  
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+#message-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+#message {
+    font-size: 2em;
+  }
+  
+#message-image {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+
